@@ -204,13 +204,15 @@
 
             z-index: 2;
 
-            animation: swing 4s ease-in-out infinite;
+            animation:
+                swing 4s ease-in-out infinite;
 
             pointer-events: none;
         }
 
 
         .spider1 {
+
             top: 90px;
             left: 12%;
         }
@@ -268,7 +270,8 @@
 
             gap: 14px;
 
-            background: rgba(0, 0, 0, 0.75);
+            background:
+                rgba(0, 0, 0, 0.75);
 
             padding: 18px 12px;
 
@@ -302,7 +305,8 @@
 
             transition: 0.3s ease;
 
-            background: rgba(0, 0, 0, 0.5);
+            background:
+                rgba(0, 0, 0, 0.5);
         }
 
 
@@ -316,7 +320,8 @@
             transform: scale(1.05);
 
             box-shadow:
-                0 0 15px rgba(255, 215, 0, 0.7);
+                0 0 15px
+                rgba(255, 215, 0, 0.7);
         }
 
 
@@ -336,7 +341,8 @@
 
             justify-content: center;
 
-            padding: 80px 100px 60px 260px;
+            padding:
+                80px 100px 60px 260px;
 
             position: relative;
 
@@ -352,7 +358,8 @@
 
             color: #FFD700;
 
-            font-size: clamp(42px, 5vw, 75px);
+            font-size:
+                clamp(42px, 5vw, 75px);
 
             font-weight: 700;
 
@@ -362,7 +369,8 @@
 
             text-shadow:
                 3px 3px 0 #000000,
-                0 0 15px rgba(255, 215, 0, 0.4);
+                0 0 15px
+                rgba(255, 215, 0, 0.4);
         }
 
 
@@ -372,7 +380,8 @@
 
         .welcome {
 
-            font-size: clamp(35px, 5vw, 75px);
+            font-size:
+                clamp(35px, 5vw, 75px);
 
             color: #FFD700;
 
@@ -384,7 +393,8 @@
 
             text-shadow:
                 4px 4px 0 #000000,
-                0 0 20px rgba(255, 215, 0, 0.4);
+                0 0 20px
+                rgba(255, 215, 0, 0.4);
 
             margin-bottom: 35px;
         }
@@ -392,7 +402,7 @@
 
         /* =====================================
            รูป Portfolio หน้าแรก
-           สี่เหลี่ยมจัตุรัส 1:1
+           สี่เหลี่ยมด้านเท่า 1:1
         ===================================== */
 
         .profile-photo {
@@ -407,17 +417,22 @@
 
             display: block;
 
-            margin: 0 auto 30px auto;
+            margin:
+                0 auto 30px auto;
 
-            border: 4px solid #FFD700;
+            border:
+                4px solid #FFD700;
 
             border-radius: 20px;
 
             background: #000000;
 
             box-shadow:
-                0 0 20px rgba(0, 0, 0, 0.9),
-                0 0 30px rgba(255, 215, 0, 0.3);
+                0 0 20px
+                rgba(0, 0, 0, 0.9),
+
+                0 0 30px
+                rgba(255, 215, 0, 0.3);
         }
 
 
@@ -467,18 +482,23 @@
 
         .content-box {
 
-            width: min(1100px, 92%);
+            width:
+                min(1000px, 92%);
 
-            background: rgba(0, 0, 0, 0.72);
+            background:
+                rgba(0, 0, 0, 0.72);
 
-            border: 2px solid #FFD700;
+            border:
+                2px solid #FFD700;
 
             border-radius: 25px;
 
-            padding: 35px 45px;
+            padding:
+                35px 45px;
 
             box-shadow:
-                0 0 20px rgba(0, 0, 0, 0.8);
+                0 0 20px
+                rgba(0, 0, 0, 0.8);
 
             backdrop-filter: blur(5px);
         }
@@ -524,14 +544,18 @@
 
             display: grid;
 
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns:
+                1fr 1fr;
 
-            gap: 10px 30px;
+            gap:
+                10px 30px;
         }
 
 
         /* =====================================
            ผลงานและกิจกรรม
+           
+           กำหนด 2 รูปต่อ 1 บรรทัด
         ===================================== */
 
         .gallery {
@@ -541,44 +565,51 @@
             display: grid;
 
             grid-template-columns:
-                repeat(5, 1fr);
+                repeat(2, 1fr);
 
-            gap: 20px;
+            gap: 25px;
 
             align-items: start;
         }
 
 
-        /* กล่องของผลงานแต่ละรูป */
+        /* =====================================
+           กล่องผลงาน
+        ===================================== */
 
         .activity-card {
 
-            background: rgba(0, 0, 0, 0.75);
+            width: 100%;
 
-            border: 2px solid #FFD700;
+            background:
+                rgba(0, 0, 0, 0.75);
+
+            border:
+                2px solid #FFD700;
 
             border-radius: 20px;
 
-            padding: 10px;
+            padding: 12px;
 
-            transition: 0.3s ease;
-
-            width: 100%;
+            transition:
+                0.3s ease;
         }
 
 
         .activity-card:hover {
 
-            transform: translateY(-8px);
+            transform:
+                translateY(-8px);
 
             box-shadow:
-                0 0 20px rgba(255, 215, 0, 0.5);
+                0 0 20px
+                rgba(255, 215, 0, 0.5);
         }
 
 
         /* =====================================
-           รูปผลงานทั้งหมดเป็นสี่เหลี่ยมจัตุรัส
-           อัตราส่วน 1 : 1
+           รูปผลงาน
+           สี่เหลี่ยมด้านเท่า 1:1
         ===================================== */
 
         .activity-card img {
@@ -595,7 +626,8 @@
 
             border-radius: 12px;
 
-            border: 1px solid #FFFFFF;
+            border:
+                1px solid #FFFFFF;
         }
 
 
@@ -631,13 +663,16 @@
 
             font-size: 24px;
 
-            padding: 15px 25px;
+            padding:
+                15px 25px;
 
-            border: 2px solid #FFD700;
+            border:
+                2px solid #FFD700;
 
             border-radius: 50px;
 
-            background: rgba(0, 0, 0, 0.5);
+            background:
+                rgba(0, 0, 0, 0.5);
 
             transition: 0.3s;
         }
@@ -649,27 +684,13 @@
 
             color: #000000;
 
-            transform: scale(1.03);
+            transform:
+                scale(1.03);
         }
 
 
         /* =====================================
-           Responsive สำหรับ Tablet
-        ===================================== */
-
-        @media (max-width: 1100px) {
-
-            .gallery {
-
-                grid-template-columns:
-                    repeat(3, 1fr);
-            }
-
-        }
-
-
-        /* =====================================
-           Responsive สำหรับมือถือ
+           Tablet
         ===================================== */
 
         @media (max-width: 900px) {
@@ -683,7 +704,8 @@
 
                 left: 50%;
 
-                transform: translateX(-50%);
+                transform:
+                    translateX(-50%);
 
                 flex-direction: row;
 
@@ -703,7 +725,8 @@
 
                 min-width: auto;
 
-                padding: 8px 12px;
+                padding:
+                    8px 12px;
 
                 font-size: 13px;
             }
@@ -724,7 +747,7 @@
             }
 
 
-            /* รูป Portfolio หน้าแรก */
+            /* รูป Portfolio */
 
             .profile-photo {
 
@@ -744,7 +767,7 @@
             }
 
 
-            /* ผลงาน 2 คอลัมน์ */
+            /* ยังคง 2 รูปต่อบรรทัด */
 
             .gallery {
 
@@ -758,11 +781,13 @@
 
 
         /* =====================================
-           Responsive สำหรับโทรศัพท์ขนาดเล็ก
+           โทรศัพท์ขนาดเล็ก
         ===================================== */
 
         @media (max-width: 500px) {
 
+
+            /* หน้าจอเล็กมากให้เหลือ 1 รูปต่อบรรทัด */
 
             .gallery {
 
@@ -772,7 +797,8 @@
 
             .content-box {
 
-                padding: 25px 20px;
+                padding:
+                    25px 20px;
             }
 
 
@@ -840,11 +866,17 @@
 
     <!-- แมงมุม -->
 
-    <div class="spider spider1">🕷</div>
+    <div class="spider spider1">
+        🕷
+    </div>
 
-    <div class="spider spider2">🕷</div>
+    <div class="spider spider2">
+        🕷
+    </div>
 
-    <div class="spider spider3">🕷</div>
+    <div class="spider spider3">
+        🕷
+    </div>
 
 
 
@@ -906,7 +938,7 @@
         </h1>
 
 
-        <!-- รูป Portfolio สี่เหลี่ยมด้านเท่า -->
+        <!-- รูป Portfolio -->
 
         <img
             src="profile.jpg"
@@ -920,7 +952,8 @@
 
             <div class="fullname">
 
-                ชื่อ-นามสกุล นายกรกฤต วรรณศิลป์
+                ชื่อ-นามสกุล
+                นายกรกฤต วรรณศิลป์
 
             </div>
 
@@ -934,7 +967,8 @@
 
             <div class="class">
 
-                ระดับชั้น มัธยมศึกษาชั้นปีที่ 6/3
+                ระดับชั้น
+                มัธยมศึกษาชั้นปีที่ 6/3
 
             </div>
 
@@ -1218,77 +1252,128 @@
         <div class="content-box">
 
 
+            <!--
+                กำหนดให้มี 2 รูปต่อ 1 บรรทัด
+            -->
+
             <div class="gallery">
 
 
-                <!-- ==========================
+                <!-- =================================
                      ผลงานที่ 1
-                =========================== -->
+                ================================= -->
 
                 <div class="activity-card">
+
 
                     <img
                         src="activity1.jpg"
                         alt="ผลงานและกิจกรรมที่ 1"
                     >
 
+
                     <p>
+
                         ผลงานและกิจกรรมที่ 1
+
                     </p>
+
 
                 </div>
 
 
-                <!-- ==========================
+
+                <!-- =================================
                      ผลงานที่ 2
-                =========================== -->
+                ================================= -->
 
                 <div class="activity-card">
+
 
                     <img
                         src="activity2.jpg"
                         alt="ผลงานและกิจกรรมที่ 2"
                     >
 
+
                     <p>
+
                         ผลงานและกิจกรรมที่ 2
+
                     </p>
+
 
                 </div>
 
 
-                <!-- ==========================
+
+                <!-- =================================
                      ผลงานที่ 3
-                =========================== -->
+                ================================= -->
 
                 <div class="activity-card">
+
 
                     <img
                         src="activity3.jpg"
                         alt="ผลงานและกิจกรรมที่ 3"
                     >
 
+
                     <p>
+
                         ผลงานและกิจกรรมที่ 3
+
                     </p>
+
 
                 </div>
 
 
-                <!-- ==========================
+
+                <!-- =================================
                      ผลงานที่ 4
-                =========================== -->
+                ================================= -->
 
                 <div class="activity-card">
+
 
                     <img
                         src="activity4.jpg"
                         alt="ผลงานและกิจกรรมที่ 4"
                     >
 
+
                     <p>
+
                         ผลงานและกิจกรรมที่ 4
+
                     </p>
+
+
+                </div>
+
+
+
+                <!-- =================================
+                     ผลงานที่ 5
+                ================================= -->
+
+                <div class="activity-card">
+
+
+                    <img
+                        src="activity5.jpg"
+                        alt="ผลงานและกิจกรรมที่ 5"
+                    >
+
+
+                    <p>
+
+                        ผลงานและกิจกรรมที่ 5
+
+                    </p>
+
 
                 </div>
 
