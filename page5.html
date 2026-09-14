@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ช่องทางการติดต่อ - กรกฤต วรรณศิลป์</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+        .contact-card {
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+            padding: 50px 40px;
+            max-width: 650px;
+            width: 100%;
+        }
+
+        .title-container {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+        h1 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            background: linear-gradient(45deg, #1e3c72, #2a5298);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 6px;
+        }
+        .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        /* รายการช่องทางติดต่อ */
+        .contact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 35px;
+        }
+        .contact-item {
+            background: #f8fafc;
+            border-left: 6px solid #2a5298;
+            padding: 16px 20px;
+            border-radius: 0 14px 14px 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: transform 0.2s ease;
+        }
+        .contact-item:hover {
+            transform: translateX(5px);
+        }
+        .icon {
+            font-size: 1.6rem;
+        }
+        .details {
+            display: flex;
+            flex-direction: column;
+        }
+        .label {
+            font-weight: bold;
+            color: #1e3c72;
+            font-size: 0.95rem;
+        }
+        .value {
+            color: #333;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        a.value:hover {
+            color: #2a5298;
+            text-decoration: underline;
+        }
+
+        /* ปุ่มย้อนกลับ */
+        .button-group {
+            display: flex;
+            gap: 20px;
+        }
+        .btn {
+            flex: 1;
+            text-align: center;
+            padding: 16px;
+            border-radius: 12px;
+            font-size: 1.05rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .btn-back {
+            background-color: #64748b;
+            color: white;
+        }
+        .btn-back:hover {
+            background-color: #475569;
+            transform: translateY(-2px);
+        }
+        .btn-home {
+            background: linear-gradient(135deg, #2a5298, #1e3c72);
+            color: white;
+            box-shadow: 0 4px 14px rgba(42, 82, 152, 0.3);
+        }
+        .btn-home:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(42, 82, 152, 0.45);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contact-card">
+        <div class="title-container">
+            <h1>CONTACT ME</h1>
+            <div class="subtitle">ช่องทางการติดต่อ</div>
+        </div>
+
+        <div class="contact-list">
+            <!-- เบอร์โทรศัพท์ -->
+            <div class="contact-item">
+                <span class="icon">📞</span>
+                <div class="details">
+                    <span class="label">เบอร์โทรศัพท์:</span>
+                    <span class="value">0xx-xxx-xxxx</span> <!-- ใส่เบอร์โทรจริงตรงนี้ -->
+                </div>
+            </div>
+
+            <!-- อีเมล -->
+            <div class="contact-item">
+                <span class="icon">✉️</span>
+                <div class="details">
+                    <span class="label">อีเมล:</span>
+                    <span class="value">yourname@gmail.com</span> <!-- ใส่ Gmail จริงตรงนี้ -->
+                </div>
+            </div>
+
+            <!-- Facebook -->
+            <div class="contact-item">
+                <span class="icon">📘</span>
+                <div class="details">
+                    <span class="label">Facebook:</span>
+                    <a href="#" class="value" target="_blank">Kronrakit Wannazin</a> <!-- แก้ไขลิงก์และชื่อ FB ได้เลย -->
+                </div>
+            </div>
+
+            <!-- Instagram -->
+            <div class="contact-item">
+                <span class="icon">📷</span>
+                <div class="details">
+                    <span class="label">Instagram:</span>
+                    <a href="#" class="value" target="_blank">@your_ig_username</a> <!-- แก้ไขลิงก์และชื่อ IG ได้เลย -->
+                </div>
+            </div>
+        </div>
+
+        <!-- ปุ่มควบคุม -->
+        <div class="button-group">
+            <a href="page4.html" class="btn btn-back">⬅ ใบเกียรติบัตร</a>
+            <a href="index.html" class="btn btn-home">กลับหน้าแรก 🏠</a>
+        </div>
+    </div>
+
+</body>
+</html>
