@@ -10,116 +10,194 @@
             margin: 0;
             padding: 0;
         }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
-            color: #333;
+            background: #0f172a;
+            color: #f8fafc;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            padding: 30px 20px;
+            padding: 40px 20px;
+            position: relative;
+            overflow-x: hidden;
         }
+
+        /* เอฟเฟกต์แสงเรืองหลังพื้นหลัง */
+        body::before, body::after {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.4;
+            z-index: 0;
+        }
+        body::before {
+            background: #3b82f6;
+            top: 15%;
+            left: 20%;
+        }
+        body::after {
+            background: #8b5cf6;
+            bottom: 15%;
+            right: 20%;
+        }
+
+        /* โครงสร้างการ์ดหลัก */
         .contact-card {
-            background: #ffffff;
-            border-radius: 24px;
-            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+            position: relative;
+            z-index: 1;
+            background: rgba(30, 41, 59, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 28px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
             padding: 50px 40px;
             max-width: 650px;
             width: 100%;
         }
 
+        /* หัวข้อ */
         .title-container {
             text-align: center;
             margin-bottom: 35px;
         }
         h1 {
-            font-size: 2.6rem;
-            font-weight: 800;
-            background: linear-gradient(45deg, #1e3c72, #2a5298);
+            font-size: 2.8rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            background: linear-gradient(135deg, #ffffff 0%, #93c5fd 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
         .subtitle {
-            color: #666;
+            color: #94a3b8;
             font-size: 1.1rem;
+            font-weight: 500;
         }
 
-        /* รายการช่องทางติดต่อ */
+        /* รายการการติดต่อแบบโมเดิร์น */
         .contact-list {
             display: flex;
             flex-direction: column;
-            gap: 16px;
-            margin-bottom: 35px;
+            gap: 18px;
+            margin-bottom: 40px;
         }
+
         .contact-item {
-            background: #f8fafc;
-            border-left: 6px solid #2a5298;
-            padding: 16px 20px;
-            border-radius: 0 14px 14px 0;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-left: 5px solid #3b82f6;
+            padding: 18px 24px;
+            border-radius: 16px;
             display: flex;
             align-items: center;
-            gap: 15px;
-            transition: transform 0.2s ease;
+            gap: 18px;
+            transition: all 0.3s ease;
         }
+
         .contact-item:hover {
-            transform: translateX(5px);
+            transform: translateX(6px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(96, 165, 250, 0.4);
+            border-left-color: #60a5fa;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
-        .icon {
-            font-size: 1.6rem;
+
+        .icon-box {
+            font-size: 1.8rem;
+            width: 48px;
+            height: 48px;
+            background: rgba(59, 130, 246, 0.15);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
+
         .details {
             display: flex;
             flex-direction: column;
         }
+
         .label {
-            font-weight: bold;
-            color: #1e3c72;
-            font-size: 0.95rem;
-        }
-        .value {
-            color: #333;
-            font-size: 1.1rem;
             font-weight: 600;
-            text-decoration: none;
+            color: #94a3b8;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 2px;
         }
+
+        .value {
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
         a.value:hover {
-            color: #2a5298;
+            color: #60a5fa;
             text-decoration: underline;
         }
 
-        /* ปุ่มย้อนกลับ */
+        /* ปุ่มกดด้านล่าง */
         .button-group {
             display: flex;
-            gap: 20px;
+            gap: 18px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
         }
+
         .btn {
             flex: 1;
             text-align: center;
-            padding: 16px;
-            border-radius: 12px;
+            padding: 16px 20px;
+            border-radius: 14px;
             font-size: 1.05rem;
-            font-weight: bold;
+            font-weight: 700;
             text-decoration: none;
             transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
         }
+
         .btn-back {
-            background-color: #64748b;
-            color: white;
+            background: rgba(255, 255, 255, 0.05);
+            color: #cbd5e1;
+            border: 1px solid rgba(255, 255, 255, 0.15);
         }
+
         .btn-back:hover {
-            background-color: #475569;
-            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.12);
+            color: #ffffff;
         }
+
         .btn-home {
-            background: linear-gradient(135deg, #2a5298, #1e3c72);
-            color: white;
-            box-shadow: 0 4px 14px rgba(42, 82, 152, 0.3);
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: #ffffff;
+            border: 1px solid #60a5fa;
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
         }
+
         .btn-home:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(42, 82, 152, 0.45);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.6);
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+        }
+
+        @media (max-width: 500px) {
+            .button-group {
+                flex-direction: column-reverse;
+            }
         }
     </style>
 </head>
@@ -134,44 +212,44 @@
         <div class="contact-list">
             <!-- เบอร์โทรศัพท์ -->
             <div class="contact-item">
-                <span class="icon">📞</span>
+                <div class="icon-box">📞</div>
                 <div class="details">
-                    <span class="label">เบอร์โทรศัพท์:</span>
+                    <span class="label">เบอร์โทรศัพท์</span>
                     <a href="tel:0955654067" class="value">095-565-4067</a>
                 </div>
             </div>
 
             <!-- อีเมล -->
             <div class="contact-item">
-                <span class="icon">✉️</span>
+                <div class="icon-box">✉️</div>
                 <div class="details">
-                    <span class="label">อีเมล:</span>
+                    <span class="label">อีเมล</span>
                     <a href="mailto:kronrakit28@gmail.com" class="value">kronrakit28@gmail.com</a>
                 </div>
             </div>
 
             <!-- Instagram -->
             <div class="contact-item">
-                <span class="icon">📷</span>
+                <div class="icon-box">📷</div>
                 <div class="details">
-                    <span class="label">Instagram:</span>
+                    <span class="label">Instagram</span>
                     <a href="https://www.instagram.com/kronrakit007x" class="value" target="_blank">kronrakit007x</a>
                 </div>
             </div>
 
             <!-- Facebook -->
             <div class="contact-item">
-                <span class="icon">📘</span>
+                <div class="icon-box">📘</div>
                 <div class="details">
-                    <span class="label">Facebook:</span>
+                    <span class="label">Facebook</span>
                     <span class="value">Kronrakit Wannazin</span>
                 </div>
             </div>
         </div>
 
-        <!-- ปุ่มควบคุม -->
+        <!-- ปุ่มกดควบคุม -->
         <div class="button-group">
-            <a href="page4.html" class="btn btn-back">⬅ ใบเกียรติบัตร</a>
+            <a href="page4.html" class="btn btn-back">⬅ ย้อนกลับใบเกียรติบัตร</a>
             <a href="index.html" class="btn btn-home">กลับหน้าแรก 🏠</a>
         </div>
     </div>
