@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ทักษะและความสนใจ - กรกฤต วรรณศิลป์</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+        /* ขนาดการ์ดพอดีกับหน้าจอ */
+        .skills-card {
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+            padding: 50px 45px;
+            max-width: 720px;
+            width: 100%;
+        }
+
+        /* หัวข้อ */
+        .title-container {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            background: linear-gradient(45deg, #1e3c72, #2a5298);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        /* ส่วนแสดงแต่ละหัวข้อใหญ่ */
+        .section-block {
+            margin-bottom: 25px;
+            background: #f8fafc;
+            padding: 20px 24px;
+            border-radius: 16px;
+            border-left: 6px solid #2a5298;
+        }
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1e3c72;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* รายการย่อยแบบแบ่งข้อ */
+        .skill-list {
+            list-style-type: none;
+            padding-left: 5px;
+        }
+        .skill-list li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 8px;
+            color: #475569;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+        .skill-list li:last-child {
+            margin-bottom: 0;
+        }
+        /* จุด Bullet สวยงาม */
+        .skill-list li::before {
+            content: "•";
+            color: #2a5298;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 5px;
+            top: -2px;
+        }
+
+        /* ปุ่มย้อนกลับ */
+        .button-group {
+            display: flex;
+            gap: 20px;
+            margin-top: 35px;
+        }
+        .btn {
+            flex: 1;
+            text-align: center;
+            padding: 16px;
+            border-radius: 12px;
+            font-size: 1.05rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .btn-back {
+            background-color: #64748b;
+            color: white;
+        }
+        .btn-back:hover {
+            background-color: #475569;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="skills-card">
+        <div class="title-container">
+            <h1>SKILLS & INTERESTS</h1>
+            <div class="subtitle">ทักษะและความสนใจ</div>
+        </div>
+
+        <!-- หัวข้อที่ 1 -->
+        <div class="section-block">
+            <div class="section-title">📐 ความสนใจด้านคณิตศาสตร์</div>
+            <ul class="skill-list">
+                <li>ชอบทำการแก้ไขโจทย์ปัญหาต่างๆ</li>
+                <li>สามารถแก้ไขโจทย์ได้อย่างเป็นขั้นตอนชัดเจน</li>
+            </ul>
+        </div>
+
+        <!-- หัวข้อที่ 2 -->
+        <div class="section-block">
+            <div class="section-title">วิเคราะห์และการแก้ปัญหา</div>
+            <ul class="skill-list">
+                <li>ชอบวิเคราะห์โจทย์ยากๆ</li>
+                <li>มีความสุขและสนุกกับความท้าทายในการแก้ปัญหา</li>
+            </ul>
+        </div>
+
+        <!-- หัวข้อที่ 3 -->
+        <div class="section-block">
+            <div class="section-title">🤝 การทำงานเป็นทีม</div>
+            <ul class="skill-list">
+                <li>พร้อมเปิดใจรับฟังความคิดเห็นของผู้อื่น</li>
+                <li>สามารถร่วมงานกับผู้อื่นได้อย่างราบรื่นและมีประสิทธิภาพ</li>
+            </ul>
+        </div>
+
+        <!-- ปุ่มย้อนกลับไปหน้าสอง -->
+        <div class="button-group">
+            <a href="page2.html" class="btn btn-back">⬅ ย้อนกลับประวัติส่วนตัว</a>
+        </div>
+    </div>
+
+</body>
+</html>
