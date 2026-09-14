@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ประวัติส่วนตัว - Profile</title>
+    <title>ประวัติส่วนตัว - กรณกฤต วรรณศิลป์</title>
     <style>
         * {
             box-sizing: border-box;
@@ -12,7 +12,7 @@
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f2f5;
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
             color: #333;
             display: flex;
             justify-content: center;
@@ -22,101 +22,154 @@
         }
         .profile-card {
             background: #ffffff;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            padding: 35px;
-            max-width: 500px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+            padding: 40px 30px;
+            max-width: 480px;
             width: 100%;
         }
-        h1 {
-            color: #1a252f;
-            margin-bottom: 20px;
-            font-size: 1.8rem;
+        
+        /* หัวข้อหน้า */
+        .title-container {
             text-align: center;
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 10px;
+            margin-bottom: 25px;
         }
-        .info-group {
-            margin-bottom: 15px;
-        }
-        .info-group label {
-            font-weight: bold;
-            color: #4a90e2;
-            display: block;
+        h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(45deg, #1e3c72, #2a5298);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             margin-bottom: 5px;
         }
-        .info-group p {
-            color: #4a5568;
-            font-size: 1rem;
+        .subtitle {
+            color: #666;
+            font-size: 0.95rem;
         }
+
+        /* กล่องข้อมูลประวัติ */
+        .info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        .info-item {
+            background: #f8fafc;
+            border-left: 4px solid #2a5298;
+            padding: 12px 16px;
+            border-radius: 0 10px 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .info-item.full-width {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 4px;
+        }
+        .label {
+            font-weight: bold;
+            color: #1e3c72;
+            font-size: 0.95rem;
+        }
+        .value {
+            color: #333;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        .highlight {
+            color: #e65100; /* สีส้มเพิ่มจุดเด่นให้คณะและมหาลัย */
+            font-weight: 700;
+        }
+
+        /* ช่องสำหรับเขียนบันทึกเพิ่มเติม */
         .input-group {
             margin-top: 20px;
         }
         .input-group label {
             font-weight: bold;
-            color: #2d3748;
+            color: #1e3c72;
             display: block;
             margin-bottom: 8px;
+            font-size: 0.95rem;
         }
-        /* ช่องสำหรับพิมพ์ข้อความ */
         textarea {
             width: 100%;
-            height: 120px;
+            height: 100px;
             padding: 12px;
-            border: 1px solid #cbd5e0;
-            border-radius: 8px;
+            border: 1.5px solid #cbd5e0;
+            border-radius: 10px;
             font-family: inherit;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             resize: vertical;
             outline: none;
             transition: border-color 0.3s;
         }
         textarea:focus {
-            border-color: #4a90e2;
-            box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+            border-color: #2a5298;
+            box-shadow: 0 0 6px rgba(42, 82, 152, 0.25);
         }
+
+        /* ปุ่มย้อนกลับ */
         .btn-back {
-            display: inline-block;
+            display: block;
             width: 100%;
             text-align: center;
             margin-top: 25px;
             padding: 12px;
-            background-color: #718096;
+            background-color: #64748b;
             color: white;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 10px;
             font-weight: bold;
-            transition: background 0.3s;
+            transition: all 0.3s ease;
         }
         .btn-back:hover {
-            background-color: #4a5568;
+            background-color: #475569;
+            transform: translateY(-2px);
         }
     </style>
 </head>
 <body>
 
     <div class="profile-card">
-        <h1>ประวัติส่วนตัว (Profile)</h1>
-
-        <div class="info-group">
-            <label>ชื่อ-นามสกุล:</label>
-            <p>นาย/นางสาว สมชาย ใส่ใจเรียน</p>
+        <div class="title-container">
+            <h1>PROFILE</h1>
+            <div class="subtitle">ข้อมูลประวัติส่วนตัว</div>
         </div>
 
-        <div class="info-group">
-            <label>การศึกษา:</label>
-            <p>มหาวิทยาลัย / โรงเรียน ...</p>
+        <div class="info-list">
+            <div class="info-item">
+                <span class="label">ชื่อ-นามสกุล:</span>
+                <span class="value">นายกรกฤต วรรณศิลป์</span>
+            </div>
+
+            <div class="info-item">
+                <span class="label">ชื่อเล่น:</span>
+                <span class="value">ทาม</span>
+            </div>
+
+            <div class="info-item">
+                <span class="label">อายุ:</span>
+                <span class="value">17 ปี</span>
+            </div>
+
+            <div class="info-item full-width">
+                <span class="label">มหาวิทยาลัยที่ต้องการเข้า:</span>
+                <span class="value highlight">สถาบันเทคโนโลยีพระจอมเกล้าลาดกระบัง</span>
+            </div>
+
+            <div class="info-item full-width">
+                <span class="label">คณะ / สาขา:</span>
+                <span class="value highlight">วิศวกรรมศาสตร์ สาขาวิศวกรรมไฟฟ้า</span>
+            </div>
         </div>
 
-        <div class="info-group">
-            <label>ความสามารถพิเศษ / ทักษะ:</label>
-            <p>HTML, CSS, JavaScript, Design</p>
-        </div>
-
-        <!-- ช่องเขียนข้อความเพิ่มเติม -->
+        <!-- ช่องพิมพ์บันทึกเพิ่มเติม -->
         <div class="input-group">
-            <label for="user-notes">บันทึกเพิ่มเติม / สิ่งที่สนใจ (พิมพ์ได้ที่นี่):</label>
-            <textarea id="user-notes" placeholder="พิมพ์ข้อความ ประวัติ หรือบันทึกเพิ่มเติมของคุณตรงนี้..."></textarea>
+            <label for="user-notes">📝 บันทึกเพิ่มเติม / เป้าหมาย:</label>
+            <textarea id="user-notes" placeholder="พิมพ์คติพจน์ ผลงาน หรือเป้าหมายเพิ่มเติมตรงนี้..."></textarea>
         </div>
 
         <!-- ปุ่มย้อนกลับ -->
