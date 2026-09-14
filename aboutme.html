@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ประวัติส่วนตัว - Profile</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .profile-card {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            padding: 35px;
+            max-width: 500px;
+            width: 100%;
+        }
+        h1 {
+            color: #1a252f;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            text-align: center;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+        .info-group {
+            margin-bottom: 15px;
+        }
+        .info-group label {
+            font-weight: bold;
+            color: #4a90e2;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .info-group p {
+            color: #4a5568;
+            font-size: 1rem;
+        }
+        .input-group {
+            margin-top: 20px;
+        }
+        .input-group label {
+            font-weight: bold;
+            color: #2d3748;
+            display: block;
+            margin-bottom: 8px;
+        }
+        /* ช่องสำหรับพิมพ์ข้อความ */
+        textarea {
+            width: 100%;
+            height: 120px;
+            padding: 12px;
+            border: 1px solid #cbd5e0;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            resize: vertical;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        textarea:focus {
+            border-color: #4a90e2;
+            box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+        }
+        .btn-back {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            margin-top: 25px;
+            padding: 12px;
+            background-color: #718096;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn-back:hover {
+            background-color: #4a5568;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-card">
+        <h1>ประวัติส่วนตัว (Profile)</h1>
+
+        <div class="info-group">
+            <label>ชื่อ-นามสกุล:</label>
+            <p>นาย/นางสาว สมชาย ใส่ใจเรียน</p>
+        </div>
+
+        <div class="info-group">
+            <label>การศึกษา:</label>
+            <p>มหาวิทยาลัย / โรงเรียน ...</p>
+        </div>
+
+        <div class="info-group">
+            <label>ความสามารถพิเศษ / ทักษะ:</label>
+            <p>HTML, CSS, JavaScript, Design</p>
+        </div>
+
+        <!-- ช่องเขียนข้อความเพิ่มเติม -->
+        <div class="input-group">
+            <label for="user-notes">บันทึกเพิ่มเติม / สิ่งที่สนใจ (พิมพ์ได้ที่นี่):</label>
+            <textarea id="user-notes" placeholder="พิมพ์ข้อความ ประวัติ หรือบันทึกเพิ่มเติมของคุณตรงนี้..."></textarea>
+        </div>
+
+        <!-- ปุ่มย้อนกลับ -->
+        <a href="index.html" class="btn-back">⬅ ย้อนกลับหน้าแรก</a>
+    </div>
+
+</body>
+</html>
