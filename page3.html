@@ -20,23 +20,24 @@
             min-height: 100vh;
             padding: 30px 20px;
         }
-        /* ขนาดการ์ดพอดีกับหน้าจอ */
+        
+        /* โครงสร้างการ์ดหลัก สมมาตรตรงกลาง */
         .skills-card {
             background: #ffffff;
             border-radius: 24px;
             box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
-            padding: 50px 45px;
-            max-width: 720px;
+            padding: 45px 40px;
+            max-width: 750px;
             width: 100%;
         }
 
-        /* หัวข้อ */
+        /* หัวข้อหลัก */
         .title-container {
             text-align: center;
             margin-bottom: 35px;
         }
         h1 {
-            font-size: 2.4rem;
+            font-size: 2.5rem;
             font-weight: 800;
             background: linear-gradient(45deg, #1e3c72, #2a5298);
             -webkit-background-clip: text;
@@ -45,30 +46,42 @@
         }
         .subtitle {
             color: #666;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
         }
 
-        /* ส่วนแสดงแต่ละหัวข้อใหญ่ */
-        .section-block {
-            margin-bottom: 25px;
-            background: #f8fafc;
-            padding: 20px 24px;
-            border-radius: 16px;
-            border-left: 6px solid #2a5298;
+        /* คอนเทนเนอร์กล่องเนื้อหา สมมาตรและเท่ากันทุกกล่อง */
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 35px;
         }
+        .section-block {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-left: 6px solid #2a5298;
+            border-radius: 14px;
+            padding: 20px 25px;
+            transition: all 0.3s ease;
+        }
+        .section-block:hover {
+            box-shadow: 0 8px 20px rgba(42, 82, 152, 0.08);
+            transform: translateY(-2px);
+        }
+
         .section-title {
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             font-weight: 700;
             color: #1e3c72;
             margin-bottom: 12px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
         }
 
-        /* รายการย่อยแบบแบ่งข้อ */
+        /* รายการย่อยแบบ Bullet จุดกลมสมมาตร */
         .skill-list {
-            list-style-type: none;
+            list-style: none;
             padding-left: 5px;
         }
         .skill-list li {
@@ -82,39 +95,64 @@
         .skill-list li:last-child {
             margin-bottom: 0;
         }
-        /* จุด Bullet สวยงาม */
         .skill-list li::before {
             content: "•";
             color: #2a5298;
             font-size: 1.5rem;
             position: absolute;
             left: 5px;
-            top: -2px;
+            top: -3px;
         }
 
-        /* ปุ่มย้อนกลับ */
+        /* ส่วนปุ่มกดด้านล่าง มีกรอบเด่นชัดสวยงาม */
         .button-group {
             display: flex;
             gap: 20px;
-            margin-top: 35px;
+            margin-top: 10px;
         }
         .btn {
             flex: 1;
             text-align: center;
-            padding: 16px;
+            padding: 16px 20px;
             border-radius: 12px;
             font-size: 1.05rem;
             font-weight: bold;
             text-decoration: none;
+            display: inline-block;
             transition: all 0.3s ease;
+            cursor: pointer;
         }
+        
+        /* ปุ่มย้อนกลับ */
         .btn-back {
-            background-color: #64748b;
-            color: white;
+            background-color: #ffffff;
+            color: #475569;
+            border: 2px solid #cbd5e0;
         }
         .btn-back:hover {
-            background-color: #475569;
+            background-color: #f1f5f9;
+            color: #1e293b;
+            border-color: #94a3b8;
             transform: translateY(-2px);
+        }
+
+        /* ปุ่มไปดูเกียรติบัตร (มีกรอบและเงาเด่นชัด) */
+        .btn-next {
+            background: linear-gradient(135deg, #2a5298, #1e3c72);
+            color: #ffffff;
+            border: 2px solid #1e3c72;
+            box-shadow: 0 4px 15px rgba(42, 82, 152, 0.35);
+        }
+        .btn-next:hover {
+            background: linear-gradient(135deg, #1e3c72, #14284b);
+            box-shadow: 0 6px 20px rgba(42, 82, 152, 0.5);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 600px) {
+            .button-group {
+                flex-direction: column-reverse;
+            }
         }
     </style>
 </head>
@@ -126,39 +164,42 @@
             <div class="subtitle">ทักษะและความสนใจ</div>
         </div>
 
-        <!-- หัวข้อที่ 1 -->
-        <div class="section-block">
-            <div class="section-title">📐 ความสนใจด้านคณิตศาสตร์</div>
-            <ul class="skill-list">
-                <li>ชอบทำการแก้ไขโจทย์ปัญหาต่างๆ</li>
-                <li>สามารถแก้ไขโจทย์ได้อย่างเป็นขั้นตอนชัดเจน</li>
-            </ul>
+        <div class="content-container">
+            <!-- หัวข้อที่ 1 -->
+            <div class="section-block">
+                <div class="section-title">📐 ความสนใจด้านคณิตศาสตร์</div>
+                <ul class="skill-list">
+                    <li>ชอบทำการแก้ไขโจทย์ปัญหาต่างๆ</li>
+                    <li>สามารถแก้ไขโจทย์ได้อย่างเป็นขั้นตอน</li>
+                </ul>
+            </div>
+
+            <!-- หัวข้อที่ 2 -->
+            <div class="section-block">
+                <div class="section-title">💡 การคิดวิเคราะห์และการแก้ปัญหา</div>
+                <ul class="skill-list">
+                    <li>ชอบวิเคราะห์โจทย์ยากๆ</li>
+                    <li>มีความสุขและสนุกกับความท้าทายในการแก้ปัญหา</li>
+                </ul>
+            </div>
+
+            <!-- หัวข้อที่ 3 -->
+            <div class="section-block">
+                <div class="section-title">🤝 การทำงานเป็นทีม</div>
+                <ul class="skill-list">
+                    <li>พร้อมรับฟังความคิดเห็นของผู้อื่น</li>
+                    <li>สามารถร่วมงานกับผู้อื่นได้อย่างราบรื่น</li>
+                </ul>
+            </div>
         </div>
 
-        <!-- หัวข้อที่ 2 -->
-        <div class="section-block">
-            <div class="section-title">วิเคราะห์และการแก้ปัญหา</div>
-            <ul class="skill-list">
-                <li>ชอบวิเคราะห์โจทย์ยากๆ</li>
-                <li>มีความสุขและสนุกกับความท้าทายในการแก้ปัญหา</li>
-            </ul>
-        </div>
-
-        <!-- หัวข้อที่ 3 -->
-        <div class="section-block">
-            <div class="section-title">🤝 การทำงานเป็นทีม</div>
-            <ul class="skill-list">
-                <li>พร้อมเปิดใจรับฟังความคิดเห็นของผู้อื่น</li>
-                <li>สามารถร่วมงานกับผู้อื่นได้อย่างราบรื่นและมีประสิทธิภาพ</li>
-            </ul>
-        </div>
-
-        <!-- ปุ่มย้อนกลับไปหน้าสอง -->
+        <!-- ปุ่มกดควบคุม พร้อมกรอบเด่นชัด -->
         <div class="button-group">
             <a href="page2.html" class="btn btn-back">⬅ ย้อนกลับประวัติส่วนตัว</a>
+            <a href="page4.html" class="btn btn-next">ไปดูเกียรติบัตร ➔</a>
         </div>
     </div>
 
 </body>
 </html>
-<a href="page4.html" class="btn btn-next">เกียรติบัตร ➔</a>
+  
