@@ -13,182 +13,152 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #0f172a;
-            color: #f8fafc;
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+            color: #333;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 40px 20px;
-            overflow-x: hidden;
-            position: relative;
         }
 
-        /* ตกแต่งแสงเรืองหลังพื้นหลัง (Background Glows) */
-        body::before, body::after {
-            content: "";
-            position: absolute;
-            width: 350px;
-            height: 350px;
-            border-radius: 50%;
-            filter: blur(90px);
-            opacity: 0.5;
-            z-index: 0;
-        }
-        body::before {
-            background: #3b82f6;
-            top: 10%;
-            left: 15%;
-        }
-        body::after {
-            background: #8b5cf6;
-            bottom: 10%;
-            right: 15%;
-        }
-
-        /* โครงสร้างการ์ดหลักขนาดใหญ่พิเศษ */
+        /* โครงสร้างการ์ดหลักขนาดใหญ่สไตล์สว่าง */
         .hero-card {
-            position: relative;
-            z-index: 1;
-            background: rgba(30, 41, 59, 0.7);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 32px;
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
-            padding: 60px 50px;
-            max-width: 900px; /* ขนาดใหญ่ขึ้น */
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+            padding: 55px 45px;
+            max-width: 850px;
             width: 100%;
             text-align: center;
-            transition: transform 0.3s ease;
+            border: 1px solid #ffffff;
         }
 
-        /* รูปโปรไฟล์ขนาดใหญ่พร้อมกรอบแสง */
+        /* กรอบรูปสี่เหลี่ยมผืนผ้าทรงนักเรียนแบบพอดีรูป */
         .profile-wrapper {
-            position: relative;
-            width: 200px;
-            height: 200px;
-            margin: 0 auto 30px;
+            width: 190px;
+            height: 240px;
+            margin: 0 auto 25px;
+            border-radius: 20px;
+            padding: 6px;
+            background: #ffffff;
+            border: 3px solid #2a5298;
+            box-shadow: 0 10px 25px rgba(42, 82, 152, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .profile-wrapper:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(42, 82, 152, 0.35);
         }
 
         .profile-img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid #60a5fa;
-            box-shadow: 0 0 25px rgba(96, 165, 250, 0.5);
-            transition: all 0.4s ease;
+            object-fit: cover; /* ปรับรูปให้อยู่ในกรอบพอดีไม่เบี้ยว */
+            object-position: center top;
+            border-radius: 14px;
+            display: block;
         }
 
-        .profile-wrapper:hover .profile-img {
-            transform: scale(1.05);
-            box-shadow: 0 0 40px rgba(96, 165, 250, 0.8);
-            border-color: #93c5fd;
-        }
-
-        /* ป้ายชื่อต้อนรับ */
+        /* ป้ายต้อนรับ */
         .welcome-badge {
             display: inline-block;
-            background: linear-gradient(90deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2));
-            border: 1px solid rgba(147, 197, 253, 0.3);
-            color: #93c5fd;
-            padding: 8px 24px;
-            border-radius: 30px;
-            font-size: 1.05rem;
+            background: #e0e7ff;
+            color: #1e3c72;
+            padding: 8px 22px;
+            border-radius: 20px;
+            font-size: 0.95rem;
             font-weight: 700;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
-        /* ชื่อหลักขนาดใหญ่โตโดดเด่น */
+        /* ชื่อหลักขนาดใหญ่เด่นชัด */
         h1.name-title {
-            font-size: 3.5rem;
+            font-size: 3.2rem;
             font-weight: 900;
             letter-spacing: 1px;
-            background: linear-gradient(135deg, #ffffff 0%, #93c5fd 50%, #3b82f6 100%);
+            background: linear-gradient(45deg, #1e3c72, #2a5298);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             line-height: 1.2;
         }
 
         p.subtitle {
-            font-size: 1.35rem;
-            color: #cbd5e1;
-            font-weight: 400;
-            margin-bottom: 40px;
+            font-size: 1.25rem;
+            color: #64748b;
+            font-weight: 600;
+            margin-bottom: 35px;
         }
 
         /* กล่องไฮไลต์ข้อมูลแบบมินิมอล */
         .info-pills {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 12px;
             flex-wrap: wrap;
-            margin-bottom: 45px;
+            margin-bottom: 40px;
         }
 
         .pill-item {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 10px 20px;
+            background: #f8fafc;
+            border: 1.5px solid #cbd5e1;
+            padding: 8px 18px;
             border-radius: 12px;
-            font-size: 1rem;
-            color: #e2e8f0;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #334155;
         }
 
-        /* ปุ่มกดเข้าชมสวยงามสุดๆ */
+        /* ปุ่มเข้าชมแฟ้มสะสมผลงาน */
         .btn-enter {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 12px;
-            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 50%, #1e40af 100%);
+            background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
             color: #ffffff;
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             font-weight: 800;
-            padding: 20px 48px;
-            border-radius: 20px;
+            padding: 18px 45px;
+            border-radius: 18px;
             text-decoration: none;
-            border: 2px solid #60a5fa;
-            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.5);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(42, 82, 152, 0.35);
+            transition: all 0.3s ease;
         }
 
         .btn-enter:hover {
-            transform: translateY(-5px) scale(1.03);
-            box-shadow: 0 18px 40px rgba(37, 99, 235, 0.7);
-            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-            border-color: #93c5fd;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(42, 82, 152, 0.5);
+            background: linear-gradient(135deg, #1e3c72 0%, #14284b 100%);
         }
 
         .btn-enter span.arrow {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             transition: transform 0.3s ease;
         }
 
         .btn-enter:hover span.arrow {
-            transform: translateX(8px);
+            transform: translateX(6px);
         }
 
-        /* Responsive สำหรับหน้าจอมือถือ */
-        @media (max-width: 768px) {
+        @media (max-width: 600px) {
             .hero-card {
-                padding: 40px 25px;
+                padding: 40px 20px;
             }
             h1.name-title {
-                font-size: 2.5rem;
+                font-size: 2.3rem;
             }
             p.subtitle {
-                font-size: 1.1rem;
+                font-size: 1.05rem;
             }
             .btn-enter {
                 width: 100%;
-                font-size: 1.15rem;
-                padding: 18px 30px;
+                font-size: 1.1rem;
+                padding: 16px 20px;
             }
         }
     </style>
@@ -198,7 +168,7 @@
     <div class="hero-card">
         <!-- รูปโปรไฟล์ -->
         <div class="profile-wrapper">
-            <img src="S__50692098.jpg" alt="กรกฤต วรรณศิลป์" class="profile-img">
+            <img src="S__50692103_2.jpg" alt="กรกฤต วรรณศิลป์" class="profile-img">
         </div>
 
         <!-- ป้ายต้อนรับ -->
@@ -208,7 +178,7 @@
         <h1 class="name-title">กรกฤต วรรณศิลป์</h1>
         <p class="subtitle">แฟ้มสะสมผลงานการเรียนรู้และกิจกรรม</p>
 
-        <!-- ไฮไลต์สั้นๆ -->
+        <!-- ไฮไลต์ผลงาน -->
         <div class="info-pills">
             <div class="pill-item">💻 Computer & Technology</div>
             <div class="pill-item">📐 Mathematics</div>
