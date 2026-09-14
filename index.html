@@ -12,7 +12,7 @@
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f2f5;
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
             color: #333;
             display: flex;
             justify-content: center;
@@ -22,67 +22,91 @@
         }
         .portfolio-card {
             background: #ffffff;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            padding: 40px;
-            max-width: 450px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+            padding: 40px 30px;
+            max-width: 420px;
             width: 100%;
             text-align: center;
         }
+        
+        /* กรอบรูปถ่ายนักเรียน/โปรไฟล์ */
+        .img-container {
+            width: 180px;
+            height: 230px; /* อัตราส่วนแนวตั้งพอดีกับรูปนักเรียน */
+            margin: 0 auto 25px auto;
+            border-radius: 16px;
+            padding: 6px;
+            background: linear-gradient(135deg, #2b5876, #4e4376);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+        }
         .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
-            border: 4px solid #4a90e2;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            border-radius: 12px;
+            display: block;
         }
-        h1 {
-            font-size: 2rem;
-            color: #1a252f;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+
+        /* ตกแต่งคำว่า PORTFOLIO ให้โดดเด่น */
+        h1.portfolio-title {
+            font-size: 2.8rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            background: linear-gradient(45deg, #1e3c72, #2a5298);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 5px;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
+
         .subtitle {
-            color: #4a90e2;
+            color: #555;
             font-size: 1.1rem;
             font-weight: 600;
-            margin-bottom: 15px;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
         }
         p {
             color: #666;
             line-height: 1.6;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
         }
+
+        /* ปุ่มไปหน้าถัดไป */
         .btn-next {
-            display: inline-block;
+            display: block;
             width: 100%;
             padding: 14px;
-            background-color: #4a90e2;
+            background: linear-gradient(135deg, #2a5298, #1e3c72);
             color: white;
             text-decoration: none;
-            border-radius: 8px;
-            font-size: 1rem;
+            border-radius: 10px;
+            font-size: 1.05rem;
             font-weight: bold;
-            transition: background 0.3s ease, transform 0.2s;
+            box-shadow: 0 4px 12px rgba(42, 82, 152, 0.3);
+            transition: all 0.3s ease;
         }
         .btn-next:hover {
-            background-color: #357abd;
             transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(42, 82, 152, 0.45);
         }
     </style>
 </head>
 <body>
 
     <div class="portfolio-card">
-        <!-- เปลี่ยน URL รูปภาพตรง src เป็นลิงก์รูป หรือใส่ชื่อไฟล์รูปของคุณ เช่น src="profile.jpg" -->
-        <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-img">
+        <!-- กรอบและรูปโปรไฟล์ -->
+        <div class="img-container">
+            <img src="S__50692103.jpg" alt="Profile Picture" class="profile-img">
+        </div>
         
-        <h1>PORTFOLIO</h1>
+        <!-- ข้อความ PORTFOLIO แบบเด่นชัด -->
+        <h1 class="portfolio-title">PORTFOLIO</h1>
         <div class="subtitle">แฟ้มสะสมผลงาน</div>
-        <p>ยินดีต้อนรับเข้าสู่เว็บไซต์ Portfolio ของฉัน คลิกปุ่มด้านล่างเพื่อดูประวัติส่วนตัวและรายละเอียดเพิ่มเติมได้เลยครับ/ค่ะ</p>
+        
+        <p>ยินดีต้อนรับเข้าสู่เว็บไซต์ Portfolio ของผม สามารถกดปุ่มด้านล่างเพื่อดูข้อมูลประวัติส่วนตัวได้เลยครับ</p>
         
         <!-- ปุ่มไปหน้าประวัติส่วนตัว -->
         <a href="page2.html" class="btn-next">ดูประวัติส่วนตัว ➔</a>
